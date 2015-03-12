@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding">
+
+        <TextView
+            android:id="@+id/latitude_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/latitude_label"
+            android:textSize="@dimen/lat_long_text_size" />
+
+        <TextView
+            android:id="@+id/latitude_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/latitude_label"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/latitude_label"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/lat_long_text_size" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:minHeight="200dp"
+        android:id="@+id/map"
+        tools:context=".LocationActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginTop="@dimen/text_margin"
+        tools:layout="@layout/location_activity" />
+
+        <TextView
+            android:id="@+id/longitude_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/longitude_label"
+            android:layout_marginTop="@dimen/text_margin"
+            android:textSize="@dimen/lat_long_text_size" />
+
+        <TextView
+            android:id="@+id/longitude_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/longitude_label"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/longitude_label"
+            android:textIsSelectable="true"
+            android:layout_marginTop="@dimen/text_margin"
+            android:textSize="@dimen/lat_long_text_size"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            android:layout_below="@+id/location_address_view" />
+
+        <TextView
+            android:id="@+id/location_address_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/default_text_size"
+            android:layout_below="@+id/longitude_label"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button android:text="@string/take_photo" android:id="@+id/btn_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progress_bar"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1"
+            android:contentDescription="Image placeholder"
+            android:minHeight="200dp"
+            android:layout_below="@+id/btn_take_photo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/play_button"
+            android:layout_alignEnd="@+id/play_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/record"
+        android:id="@+id/record_button"
+        android:layout_below="@+id/imageView1"
+        android:layout_toLeftOf="@+id/btn_take_photo"
+        android:layout_toStartOf="@+id/btn_take_photo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+        android:id="@+id/play_button"
+        android:layout_below="@+id/imageView1"
+        android:layout_toRightOf="@+id/btn_take_photo"
+        android:layout_toEndOf="@+id/btn_take_photo" />
+</RelativeLayout>
