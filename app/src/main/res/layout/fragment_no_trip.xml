@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.pandehoz.viajary.NoTripFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/no_trips_found"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:id="@+id/no_trips_found"
+        android:singleLine="true"
+        android:textSize="@dimen/text_heading"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_trip"
+        android:id="@+id/add_trip"
+        android:layout_below="@+id/no_trips_found"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.pandehoz.viajary.TripsItemFragment"
+    android:background="@color/material_deep_teal_200">
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/background_material_dark"
+        android:textSize="@dimen/text_heading"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:id="@+id/tripTitle"
+        android:text="kjkjhk" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_date"
+        android:id="@+id/tripStartDate"
+        android:layout_below="@+id/tripTitle"
+        android:textSize="@dimen/text_sub_heading"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/tripTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"
+        android:id="@+id/end_date"
+        android:textSize="@dimen/text_sub_heading"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tripStartDate"
+        android:layout_alignLeft="@+id/tripStartDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/expenses"
+        android:id="@+id/expenses_textView"
+        android:textSize="@dimen/text_sub_heading"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/end_date"
+        android:layout_alignLeft="@+id/end_date" />
+
+</RelativeLayout>

@@ -1,0 +1,215 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="wrap_content" tools:context="com.pandehoz.viajary.NewTripFragment"
+    android:padding="@dimen/activity_vertical_margin">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_save"
+        android:id="@+id/save_trip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_title"
+        android:id="@+id/new_trip_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/save_trip"
+        android:layout_toStartOf="@+id/save_trip"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:layout_alignBottom="@+id/editText_trip_title"
+        android:paddingBottom="@dimen/layout_padding" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_trip_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/new_trip_title"
+        android:layout_toEndOf="@+id/new_trip_title"
+        android:paddingBottom="@dimen/layout_padding" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_from"
+        android:id="@+id/new_trip_from"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:layout_below="@+id/new_trip_title"
+        android:layout_alignLeft="@+id/new_trip_title"
+        android:layout_alignStart="@+id/new_trip_title"
+        android:paddingBottom="@dimen/layout_padding" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_trip_from"
+        android:paddingBottom="@dimen/layout_padding"
+        android:layout_alignTop="@+id/new_trip_from"
+        android:layout_alignRight="@+id/editText_trip_title"
+        android:layout_alignEnd="@+id/editText_trip_title"
+        android:layout_above="@+id/editText_trip_to"
+        android:layout_alignLeft="@+id/editText_trip_title"
+        android:layout_alignStart="@+id/editText_trip_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_to"
+        android:id="@+id/new_trip_to"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:layout_below="@+id/new_trip_from"
+        android:layout_alignLeft="@+id/new_trip_from"
+        android:layout_alignStart="@+id/new_trip_from"
+        android:paddingBottom="@dimen/layout_padding" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_trip_to"
+        android:paddingBottom="@dimen/layout_padding"
+        android:layout_below="@+id/new_trip_from"
+        android:layout_alignLeft="@+id/editText_trip_title"
+        android:layout_alignStart="@+id/editText_trip_title"
+        android:layout_alignRight="@+id/editText_trip_from"
+        android:layout_alignEnd="@+id/editText_trip_from" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_start_date"
+        android:id="@+id/new_trip_start_date"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:layout_below="@+id/new_trip_to"
+        android:layout_alignLeft="@+id/new_trip_to"
+        android:layout_alignStart="@+id/new_trip_to"
+        android:paddingBottom="@dimen/layout_padding" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_end_date"
+        android:id="@+id/new_trip_end_date"
+        android:textSize="@dimen/abc_text_size_headline_material"
+        android:paddingBottom="@dimen/layout_padding"
+        android:layout_alignBottom="@+id/button_endDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transport"
+        android:id="@+id/checkBox_transport"
+        android:layout_above="@+id/checkBox_hotel"
+        android:layout_alignLeft="@+id/checkBox_hotel"
+        android:layout_alignStart="@+id/checkBox_hotel" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hotel"
+        android:id="@+id/checkBox_hotel"
+        android:layout_above="@+id/checkBox_food"
+        android:layout_alignLeft="@+id/checkBox_food"
+        android:layout_alignStart="@+id/checkBox_food" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/food"
+        android:id="@+id/checkBox_food"
+        android:layout_above="@+id/checkBox_activities"
+        android:layout_alignLeft="@+id/checkBox_activities"
+        android:layout_alignStart="@+id/checkBox_activities" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activities"
+        android:id="@+id/checkBox_activities"
+        android:layout_above="@+id/checkBox_cityTransport"
+        android:layout_alignLeft="@+id/checkBox_cityTransport"
+        android:layout_alignStart="@+id/checkBox_cityTransport" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_transport"
+        android:id="@+id/checkBox_cityTransport"
+        android:layout_above="@+id/checkBox_carrental" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_rental"
+        android:id="@+id/checkBox_carrental"
+        android:layout_alignLeft="@+id/checkBox_cityTransport"
+        android:layout_alignStart="@+id/checkBox_cityTransport"
+        android:layout_above="@+id/save_trip" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_trip_expenses"
+        android:id="@+id/textView"
+        android:textSize="@dimen/abc_text_size_large_material"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/button_endDate"
+        android:layout_toStartOf="@+id/button_endDate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_date"
+        android:id="@+id/button_startDate"
+        android:layout_below="@+id/editText_trip_to"
+        android:layout_alignLeft="@+id/editText_trip_to"
+        android:layout_alignStart="@+id/editText_trip_to"
+        android:onClick="showDatePickerDialog"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_date"
+        android:id="@+id/button_endDate"
+        android:layout_below="@+id/button_startDate"
+        android:layout_alignLeft="@+id/button_startDate"
+        android:layout_alignStart="@+id/button_startDate"
+        android:onClick="showDatePickerDialog"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fuel"
+        android:id="@+id/checkBox_fuel"
+        android:layout_alignRight="@+id/editText_trip_to"
+        android:layout_alignEnd="@+id/editText_trip_to"
+        android:layout_alignBottom="@+id/checkBox_transport"
+        android:layout_toRightOf="@+id/save_trip"
+        android:layout_toEndOf="@+id/save_trip" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/others"
+        android:id="@+id/checkBox_others"
+        android:layout_above="@+id/checkBox_food"
+        android:layout_alignLeft="@+id/checkBox_fuel"
+        android:layout_alignStart="@+id/checkBox_fuel" />
+
+</RelativeLayout>

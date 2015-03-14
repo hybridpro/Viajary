@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Criteria;
@@ -50,8 +51,10 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class LocationActivity extends ActionBarActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -193,7 +196,7 @@ public class LocationActivity extends ActionBarActivity implements
      * have been completely destroyed during this process (it is likely that it would only be
      * stopped or paused), {@link #onCreate(Bundle)} may not be called again so we should call this
      * method in {@link #onResume()} to guarantee that it will be called.
-     */
+
     private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
@@ -206,12 +209,12 @@ public class LocationActivity extends ActionBarActivity implements
             mMap.setOnMapClickListener(myMapClickListener);
             setUpMap();
         }
-    }
+    }*/
 
     @Override
     protected void onResume() {
         super.onResume();
-        setUpMapIfNeeded();
+        //setUpMapIfNeeded();
     }
 
     /**
@@ -466,6 +469,12 @@ public class LocationActivity extends ActionBarActivity implements
         mPlayButton = (Button) findViewById(R.id.play_button);
         mPlayButton.setOnClickListener(mPlayAudioListener);
 
+        Currency currency = Currency.getInstance(Locale.getDefault());
+        Resources res = getResources();
+        String text = String.format(res.getString(R.string.expenses), currency.getCurrencyCode());
+        TextView expenses = (TextView) findViewById(R.id.expenses_id);
+        expenses.setText(text);
+
         setBtnListenerOrDisable(
                 picBtn,
                 mTakePicOnClickListener,
@@ -474,7 +483,7 @@ public class LocationActivity extends ActionBarActivity implements
 
         updateValuesFromBundle(savedInstanceState);
 
-        setUpMapIfNeeded();
+        //setUpMapIfNeeded();
 
         buildGoogleApiClient();
     }
