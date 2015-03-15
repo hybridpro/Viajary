@@ -21,6 +21,7 @@ public class TripsAdapter extends BaseAdapter {
     public TripsAdapter(LayoutInflater inflater, int resourceId) {
         mLayoutInflater = inflater;
         mResourceId = resourceId;
+        Trips.retrieveTrips();
     }
 
     @Override

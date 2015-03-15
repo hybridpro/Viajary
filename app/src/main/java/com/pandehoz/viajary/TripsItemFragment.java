@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
@@ -24,6 +25,8 @@ public class TripsItemFragment extends Fragment implements AbsListView.OnItemCli
     private TripsAdapter mAdapter;
 
     private static final String TAG = "TripsItemFragment";
+
+    private Button addTripbtn;
 
     public static TripsItemFragment newInstance() {
         return new TripsItemFragment();
@@ -42,9 +45,28 @@ public class TripsItemFragment extends Fragment implements AbsListView.OnItemCli
 
     }
 
+    Button.OnClickListener addTripListener =
+            new Button.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.sample_content_fragment,
+                                    new NewTripFragment()
+                            )
+                                    // We push the fragment transaction to back stack. User can go back to the
+                                    // previous fragment by pressing back button.
+                            .addToBackStack("New Trip")
+                            .commit();
+                }
+            };
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         GridView grid = (GridView) view.findViewById(R.id.grid);
+        addTripbtn = (Button) view.findViewById(R.id.grid_add_trip);
+        addTripbtn.setOnClickListener(addTripListener);
         grid.setAdapter(mAdapter);
         grid.setOnItemClickListener(this);
     }

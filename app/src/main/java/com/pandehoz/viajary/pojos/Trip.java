@@ -17,6 +17,34 @@ public class Trip {
 
     private String actualStartTime;
 
+    private String startDate;
+
+    private String endDate;
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public List<Expense> getExpensesToRecord() {
+        return expensesToRecord;
+    }
+
+    public void setExpensesToRecord(List<Expense> expensesToRecord) {
+        this.expensesToRecord = expensesToRecord;
+    }
+
     private List<Expense> expensesToRecord;
 
     public List<Expense> getExpenses() {

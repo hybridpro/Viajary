@@ -1,22 +1,38 @@
-<GridView
-    android:id="@+id/grid"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:columnWidth="200dp"
-    android:horizontalSpacing="10dp"
-    android:numColumns="auto_fit"
-    android:padding="50dp"
-    android:scrollbars="none"
-    android:stretchMode="columnWidth"
-    android:verticalSpacing="10dp"
-    android:background="@android:color/holo_blue_bright"
-    tools:context="com.pandehoz.viajary.TripsItemFragment"
-    tools:listitem="@layout/fragment_trips"
-    android:alpha="0.5"
-    android:drawSelectorOnTop="false"
-    android:layoutMode="opticalBounds"
-    android:accessibilityLiveRegion="polite"
-    android:backgroundTint="@color/link_text_material_light" />
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+
+    <GridView
+        android:id="@+id/grid"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:columnWidth="200dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:padding="50dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        tools:context="com.pandehoz.viajary.TripsItemFragment"
+        tools:listitem="@layout/fragment_trips"
+        android:alpha="0.5"
+        android:drawSelectorOnTop="false"
+        android:layout_weight="0.88" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:text="@string/add_trip"
+        android:id="@+id/grid_add_trip"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12" />
+
+</LinearLayout>
+

@@ -16,6 +16,8 @@ public class TripsActivity extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trips);
+        Trips.setContext(this);
+        Trips.retrieveTrips();
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             if(Trips.ITEMS.size() > 0) {
